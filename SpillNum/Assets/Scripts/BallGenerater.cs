@@ -13,7 +13,8 @@ public class BallGenerater : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // 해상도 대응
+        Screen.SetResolution(Screen.width, Screen.width * 16 / 9, false);
     }
 
     // Update is called once per frame
