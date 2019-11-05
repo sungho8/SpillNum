@@ -1,8 +1,11 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AddBall
     - BallGenerater
     - BallNumber
+    - SkillDrag
+    - SkillGenerator
     - SortingLayerInMeshRenderer
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
@@ -48,6 +51,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -69,13 +74,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10006}
     - Class: 114
-      Script: {instanceID: 10286}
+      Script: {instanceID: 10138}
     - Class: 114
-      Script: {instanceID: 10978}
+      Script: {instanceID: 10288}
     - Class: 114
-      Script: {instanceID: 11126}
+      Script: {instanceID: 10980}
     - Class: 114
-      Script: {instanceID: 11496}
+      Script: {instanceID: 11128}
+    - Class: 114
+      Script: {instanceID: 11168}
+    - Class: 114
+      Script: {instanceID: 11500}
+    - Class: 114
+      Script: {instanceID: 14350}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -255,6 +266,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 94706bb59f021d2a133e22688814e0fc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SkillDrag
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -437,6 +454,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: a96fc2ee523039c67b6ac5c84efc79cd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SkillGenerator
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -537,6 +560,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: ccb5cb3320380d404101a6d1fbdb086c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AddBall
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

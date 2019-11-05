@@ -14,7 +14,7 @@ public class BallGenerater : MonoBehaviour
     void Start()
     {
         // 해상도 대응
-        Screen.SetResolution(Screen.width, Screen.width * 16 / 9, false);
+        //Screen.SetResolution(Screen.width, Screen.width * 16 / 9, false);
     }
 
     // Update is called once per frame
@@ -24,14 +24,23 @@ public class BallGenerater : MonoBehaviour
         {
             nextTime = Time.time + TimeLeft;
 
-            MakeBall();
+            //MakeBall();
         }
     }
 
     public void MakeBall()
     {
         temp = Instantiate(ball, new Vector2(Random.Range(-1.5f, 1.5f), transform.position.y), Quaternion.identity);
+        temp.name = CutClone(temp.name);
         temp.transform.SetParent(GameObject.Find("Canvas").transform);
         temp.transform.localScale = new Vector2(80, 80);
+    }
+
+    string CutClone(string name)
+    {
+        string result;
+        int cut = name.Length - 7;
+        result = name.Substring(0, cut);
+        return result;
     }
 }

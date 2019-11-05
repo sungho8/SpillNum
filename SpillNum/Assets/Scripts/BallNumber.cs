@@ -15,12 +15,11 @@ public class BallNumber : MonoBehaviour
     SpriteRenderer render;
     ParticleSystem particle;
     Animation anim;
-    public int number = 1;
+    public int number;
     TextMesh numText;
     // Start is called before the first frame update
     void Start()
     {
-        number = 1;
         render = GetComponent<SpriteRenderer>();
         particle = transform.GetChild(0).GetComponent<ParticleSystem>();
         particle.Stop();
@@ -31,6 +30,9 @@ public class BallNumber : MonoBehaviour
         this.audio = this.gameObject.AddComponent<AudioSource>();
         this.audio.clip = this.bubbleSound[0];
         this.audio.loop = false;
+
+        if(number!= 1)
+            SetColor();
     }
     public void SetColorArray()
     {
@@ -82,6 +84,21 @@ public class BallNumber : MonoBehaviour
         return number;
     }
 
+    public void SetNumber(int number)
+    {
+        this.number = number;
+    }
+
+    public void SetColor()
+    {
+        numText.text = number.ToString();
+        if (render != null)
+        {
+            int i = (int)(Mathf.Log(number) / Mathf.Log(2f)) - 1;
+            render.color = new Color(r[i], g[i], b[i]);
+        }
+    }
+
     [System.Obsolete]
     public void SumNumber(int sum)
     {
@@ -89,12 +106,7 @@ public class BallNumber : MonoBehaviour
         this.audio.Play();
         delayTime(1f);
         number += sum;
-        numText.text = number.ToString();
-        if (render != null)
-        {
-            int i = (int)(Mathf.Log(number)/Mathf.Log(2f)) - 1;
-            render.color = new Color(r[i], g[i], b[i]);
-        }
+        SetColor();
         anim.Play("merge");
         particle.startColor = render.color;
         particle.Play();
