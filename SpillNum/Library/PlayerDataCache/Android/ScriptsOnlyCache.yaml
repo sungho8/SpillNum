@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - AddBall
     - BallGenerater
     - BallNumber
+    - ScoreManager
     - SkillDrag
     - SkillGenerator
     - SortingLayerInMeshRenderer
@@ -20,8 +21,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -59,6 +62,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
     - Class: 102
       Script: {instanceID: 0}
     - Class: 104
@@ -66,27 +73,29 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 598}
+      Script: {instanceID: 600}
     - Class: 114
-      Script: {instanceID: 9682}
+      Script: {instanceID: 9684}
     - Class: 114
-      Script: {instanceID: 9760}
+      Script: {instanceID: 9762}
     - Class: 114
-      Script: {instanceID: 10006}
+      Script: {instanceID: 9808}
     - Class: 114
-      Script: {instanceID: 10138}
+      Script: {instanceID: 10010}
     - Class: 114
-      Script: {instanceID: 10288}
+      Script: {instanceID: 10142}
     - Class: 114
-      Script: {instanceID: 10980}
+      Script: {instanceID: 10292}
     - Class: 114
-      Script: {instanceID: 11128}
+      Script: {instanceID: 10984}
     - Class: 114
-      Script: {instanceID: 11168}
+      Script: {instanceID: 11132}
     - Class: 114
-      Script: {instanceID: 11500}
+      Script: {instanceID: 11172}
     - Class: 114
-      Script: {instanceID: 14350}
+      Script: {instanceID: 11354}
+    - Class: 114
+      Script: {instanceID: 11506}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -152,6 +161,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: ccb5cb3320380d404101a6d1fbdb086c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AddBall
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -472,6 +487,12 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: 4daafa97696a513c7d4f1276975ff522
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreManager
+  - hash:
+      serializedVersion: 2
       Hash: 5372ed2ce39229b1ac910757999a8be2
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -560,12 +581,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: ccb5cb3320380d404101a6d1fbdb086c
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: AddBall
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

@@ -8,10 +8,14 @@ public class SkillDrag : MonoBehaviour
     Vector3 objPosition;
     Vector3 originPosition;
     public Vector3 initMousePos;
+    ScoreManager scoreManager;
+    SkillGenerator skillGenerator;
     int slot;
-    void Update()
-    {
 
+    public void Start()
+    {
+        scoreManager = GameObject.Find("Generator").GetComponent<ScoreManager>();
+        skillGenerator = GameObject.Find("Generator").GetComponent<SkillGenerator>();
     }
 
     public void SetSlot(int slot)
@@ -52,7 +56,8 @@ public class SkillDrag : MonoBehaviour
         if(transform.position.y > flagY)
         {
             this.gameObject.GetComponent<AddBall>().Ball();
-            GameObject.Find("Generator").GetComponent<SkillGenerator>().MakeSkill(slot);
+            skillGenerator.SendMessage("MakeSkill", slot);
+            scoreManager.SendMessage("SetTurn");
         }
         // 영역밖
         else            
