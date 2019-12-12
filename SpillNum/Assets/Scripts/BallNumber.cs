@@ -17,7 +17,9 @@ public class BallNumber : MonoBehaviour
     Animation anim;
     public int number;
     TextMesh numText;
+
     ScoreManager scoreManager;
+    GameController gameController;
 
     Vector3 scorePos;
     bool isDestroy = false;
@@ -34,6 +36,7 @@ public class BallNumber : MonoBehaviour
         SetColorArray();
 
         scorePos = GameObject.Find("Score").transform.position;
+        gameController = GameObject.Find("Flag").GetComponent<GameController>();
 
         this.audio = this.gameObject.AddComponent<AudioSource>();
         this.audio.clip = this.bubbleSound[0];
@@ -128,6 +131,7 @@ public class BallNumber : MonoBehaviour
         // Plus number, Score
         number += sum;
         SetColor();
+        gameController.SendMessage("downFlag",1);
 
         // Animation
         anim.Play("merge");

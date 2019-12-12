@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - AddBall
     - BallGenerater
     - BallNumber
+    - GameController
     - ScoreManager
     - SkillDrag
     - SkillGenerator
@@ -89,13 +90,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10984}
     - Class: 114
-      Script: {instanceID: 11132}
+      Script: {instanceID: 11128}
     - Class: 114
-      Script: {instanceID: 11172}
+      Script: {instanceID: 11134}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11174}
     - Class: 114
-      Script: {instanceID: 11506}
+      Script: {instanceID: 11356}
+    - Class: 114
+      Script: {instanceID: 11508}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -457,6 +460,12 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
+      Hash: 68c68d7d66c0ab86b9722f1d1b22ec4e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameController
+  - hash:
+      serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -584,4 +593,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: "C:/Users/sungh/OneDrive/\uBC14\uD0D5 \uD654\uBA74/tt.apk"
+  playerPath: C:/Users/sungho/Desktop/spillnum.apk

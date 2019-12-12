@@ -32,7 +32,6 @@ public class ScoreManager : MonoBehaviour
         GameObject sEffect = Instantiate(scoreEffect);
         sEffect.name = CutClone(sEffect.name);
         sEffect.transform.SetParent(GameObject.Find("Canvas").transform);
-        sEffect.transform.localScale = new Vector2(9, 9);
         sEffect.transform.localPosition = score.position + new Vector3(-6,60);
         sEffect.transform.localPosition = new Vector3(sEffect.transform.localPosition.x, sEffect.transform.localPosition.y,0);
         TextMesh effectText = sEffect.GetComponent<TextMesh>();
@@ -56,11 +55,13 @@ public class ScoreManager : MonoBehaviour
                 cEffect = Instantiate(comboEffect5);
                 break;
         }
-        cEffect.transform.SetParent(GameObject.Find("Canvas").transform);
-        cEffect.transform.localScale = new Vector2(4, 4);
-        cEffect.transform.localPosition = score.position + new Vector3(-6, 60);
-        cEffect.transform.localPosition = new Vector3(sEffect.transform.localPosition.x, sEffect.transform.localPosition.y, 0);
-
+        if(cEffect != null)
+        {
+            cEffect.transform.SetParent(GameObject.Find("Canvas").transform);
+            cEffect.transform.localScale = new Vector2(4, 4);
+            cEffect.transform.localPosition = score.position + new Vector3(-6, 60);
+            cEffect.transform.localPosition = new Vector3(sEffect.transform.localPosition.x, sEffect.transform.localPosition.y, 0);
+        }
 
         effectText.text = "+" + (combo * score.number);
     }
